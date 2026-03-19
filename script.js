@@ -122,7 +122,6 @@ function mostrarPelicula(lista) {
 
   lista.forEach((pelicula, index) => {
     const fila = document.createElement("tr");
-
     fila.innerHTML = `
             <td>${pelicula.titulo}</td>
             <td>${pelicula.anio}</td>
@@ -136,7 +135,6 @@ function mostrarPelicula(lista) {
         `;
     //Boton Eliminar
     const botonEliminar = fila.querySelector(".btn-eliminar");
-
     botonEliminar.addEventListener("click", () => {
       peliculas.splice(index, 1);
       fila.remove();
