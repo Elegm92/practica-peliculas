@@ -139,7 +139,7 @@ function mostrarPelicula(lista) {
 
     botonEliminar.addEventListener("click", () => {
       peliculas.splice(index, 1);
-      filtrarPeliculas();
+      fila.remove();
     });
     //Boton Editar tabla
     fila.querySelector(".btn-editar").addEventListener("click", () => {
