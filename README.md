@@ -24,8 +24,7 @@ Cada película del listado tiene un botón **Editar** que permite modificar sus 
 Incluye:
 - Inputs dinámicos  
 - Select de género  
-- Botón Guardar  
-- Botón Cancelar  
+- Botón Guardar
 
 ---
 
