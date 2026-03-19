@@ -154,6 +154,17 @@ td img {
   white-space: pre-wrap;
 }
 
+.seccion-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.seccion-filtros div {
+  display: flex;
+  flex-direction: column;
+}
+
 /* IDS */
 #errorMessages {
   margin-top: 15px;
@@ -203,15 +214,9 @@ td img {
   }
 
   .seccion-filtros {
-    display: flex;
     flex-direction: row;
     align-items: flex-end;
     gap: 20px;
-  }
-
-  .seccion-filtros div {
-    display: flex;
-    flex-direction: column;
   }
 
   #filtro-genero,

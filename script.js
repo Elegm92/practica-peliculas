@@ -192,7 +192,7 @@ function filtrarPeliculas() {
   }
   if (textoBuscador !== "") {
     pelisFiltradas = pelisFiltradas.filter((pelicula) => {
-      return pelicula.titulo.toLowerCase().includes(textoBuscador.toLowerCase());
+      return pelicula.titulo.includes(textoBuscador);
     });
   }
   mostrarPelicula(pelisFiltradas);
