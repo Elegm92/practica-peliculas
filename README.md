@@ -74,12 +74,12 @@ La aplicación está adaptada para móviles:
 │
 ├── index.html
 ├── style.css
-├── scripts.js
+├── script.js
 ├── README.md
 │
 ├── assets/
-│   ├── Lio1.jpg
-│   ├── Lio2.jpg
+│   ├── peliculas1.png
+│   ├── peliculas2.png
 ```
 ## Cómo funciona
 
