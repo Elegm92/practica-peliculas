@@ -40,7 +40,7 @@ La búsqueda es **insensible a mayúsculas/minúsculas**.
 
 ---
 
-### 🎭 Filtrar por género
+### Filtrar por género
 Un desplegable permite mostrar las peliculas por generos:
 - Todas las películas  
 - Terror  
