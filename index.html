@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caja de Películas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Caja de películas</h1>
+      <p>Un lugar donde encontrar tus peliculas preferidas.</p>
+    </header>
+
+    <main>
+      <section id="peliculas">
+        <h2>Añade una nueva película</h2>
+
+        <form id="form">
+          <label for="titulo">Título</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="Escribe el título"
+          />
+
+          <label for="anio">Año</label>
+          <input type="text" id="anio" name="anio" placeholder="Ej: 1997" />
+
+          <label for="descripcion">Descripción</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            placeholder="Escribe una breve descripción"
+          ></textarea>
+
+          <label for="urlFoto">URL de la foto</label>
+          <input
+            type="text"
+            id="urlFoto"
+            name="urlFoto"
+            placeholder="https://...jpg"
+          />
+
+          <label for="genero">Género</label>
+          <select id="genero" name="genero">
+            <option value="">Selecciona un género</option>
+            <option value="terror">Terror</option>
+            <option value="accion">Acción</option>
+            <option value="comedia">Comedia</option>
+            <option value="romantica">Romántica</option>
+          </select>
+
+          <button class="guardar" type="submit">Añadir película</button>
+        </form>
+        <div id="errorMessages"></div>
+      </section>
+
+      <section id="filtros">
+        <h2>Filtrar películas</h2>
+
+        <div>
+          <label for="filtro-genero">Filtrar por género</label>
+          <select id="filtro-genero" name="filtro-genero">
+            <option value="todasPelis">Todas</option>
+            <option value="terror">Terror</option>
+            <option value="accion">Acción</option>
+            <option value="comedia">Comedia</option>
+            <option value="romantica">Romántica</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="buscar">Buscar por título</label>
+          <input
+            type="text"
+            id="buscar"
+            name="buscar"
+            placeholder="Escribe nombre de película"
+          />
+        </div>
+      </section>
+
+      <section id="lista-pelis">
+        <h2>Listado de películas</h2>
+
+        <div class="tabla-responsive">
+          <table id="tabla">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Año</th>
+                <th>Descripción</th>
+                <th>Foto</th>
+                <th>Género</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-pelis">
+              <!-- Las películas se insertan con JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Caja de Películas</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
