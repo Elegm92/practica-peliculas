@@ -1,253 +1,221 @@
 :root {
-    --grey: #ccc;
-    --white: #ffffff;
-    --dim-white: #f4f4f4;
-    --black: #000000;
-    --dim-black: #333;
-    --soft-grey: #585858;
-    --dim-grey: #bdbdbd;
-    --red: #ff0000;
-    --green: #1f7a1f;
+  --white: #ffffff;
+  --black: #000000;
+  --grey-light: #f4f4f4;
+  --grey: #ccc;
+  --grey-dark: #585858;
+  --red: #ff0000;
+  --shadow: rgba(0, 0, 0, 0.15);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Base móvil */
+html, body {
+  overflow-x: hidden;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--dim-white);
-    color: var(--black);
-    line-height: 1.5;
-    padding: 12px;
+  font-family: Arial, sans-serif;
+  background-color: var(--grey-light);
+  color: var(--black);
+  line-height: 1.5;
+  padding: 12px;
 }
-
-main {
-    width: 100%;
-}
-
-/* Header */
 
 header {
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 15px;
-    border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 15px;
+  border-radius: 8px;
 }
 
 header h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 header p {
-    font-size: 14px;
-    color: var(--dim-grey);
+  font-size: 14px;
+  color: var(--grey);
 }
 
-/* Secciones */
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: var(--grey-dark);
+  font-size: 14px;
+}
 
 section {
-    background-color: var(--white);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: var(--white);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 section h2 {
-    margin-bottom: 15px;
-    color: var(--dim-black);
-    font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--black);
+  font-size: 20px;
 }
 
-/* Formulario */
-
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 label {
-    font-weight: bold;
-    font-size: 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 input,
 textarea,
 select,
 button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid var(--grey);
-    border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
 }
 
 textarea {
-    min-height: 100px;
-    resize: none;
+  min-height: 100px;
+  resize: none;
 }
 
-/* Botones */
-
 button {
-    background-color: var(--black);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-    background-color: var(--soft-grey);
-}
-
-/* Mensajes */
-
-#errorMessages {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.errorMessage {
-    color: var(--red);
-    white-space: pre-wrap;
-}
-
-.success {
-    color: var(--green);
-    font-weight: bold;
-}
-
-/* Filtros */
-
-#filtros {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Tabla */
-
-.tabla-responsive {
-    width: 100%;
-    overflow-x: auto;
+  background-color: var(--grey-dark);
 }
 
 table {
-    width: 100%;
-    min-width: 700px;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 14px;
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 th,
 td {
-    border: 1px solid var(--grey);
-    padding: 8px;
-    text-align: center;
-    vertical-align: middle;
+  border: 1px solid var(--grey);
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 th {
-    background-color: var(--black);
-    color: var(--white);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 td img {
-    width: 70px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 6px;
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-/* Botones de acciones (MÓVIL) */
+/* Clases */
+
+.tabla-responsive {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
 .acciones button {
-    display: block;
-    width: 100%;
-    margin: 4px 0;
-    padding: 8px;
-    font-size: 14px;
+  display: block;
+  width: 100%;
+  margin: 4px 0;
+  padding: 8px;
+  font-size: 14px;
 }
 
-/* Footer */
-
-footer {
-    text-align: center;
-    margin-top: 25px;
-    color: var(--soft-grey);
-    font-size: 14px;
+.errorMessage {
+  color: var(--red);
+  white-space: pre-wrap;
 }
 
-/* Tablet */
+/* IDS */
+#errorMessages {
+  margin-top: 15px;
+  font-size: 14px;
+}
 
 @media (min-width: 768px) {
-    body {
-        padding: 20px;
-    }
+  body {
+    padding: 20px;
+  }
 
-    main,
-    header {
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  main,
+  header {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    section {
-        padding: 20px;
-        margin-bottom: 25px;
-    }
+  section {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
 
-    section h2 {
-        font-size: 22px;
-    }
+  section h2 {
+    font-size: 22px;
+  }
 
-    table {
-        font-size: 15px;
-    }
+  table {
+    font-size: 15px;
+  }
 
-    th,
-    td {
-        padding: 10px;
-    }
+  th,
+  td {
+    padding: 10px;
+  }
 
-    td img {
-        width: 80px;
-        height: 110px;
-    }
+  td img {
+    width: 80px;
+    height: 110px;
+  }
 
-    .acciones button {
-        display: inline-block;
-        width: auto;
-        margin: 2px;
-        padding: 8px 10px;
-    }
+  .acciones button {
+    display: inline-block;
+    width: auto;
+    margin: 2px;
+    padding: 8px 10px;
+  }
 
-        /* Filtros en línea */
-    #filtros {
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 20px;
-    }
+  .seccion-filtros {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+  }
 
-    #filtros div {
-        display: flex;
-        flex-direction: column;
-    }
+  .seccion-filtros div {
+    display: flex;
+    flex-direction: column;
+  }
 
-    #filtro-genero,
-    #buscar {
-        max-width: 250px;
-    }
+  #filtro-genero,
+  #buscar {
+    max-width: 250px;
+  }
 }

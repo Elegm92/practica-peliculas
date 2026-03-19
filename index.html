@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caja de Películas</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <header>
       <h1>Caja de películas</h1>
-      <p>Un lugar donde encontrar tus peliculas preferidas.</p>
+      <p>Un lugar donde encontrar tus películas preferidas.</p>
     </header>
 
     <main>
-      <section id="peliculas">
+      <section class="seccion-formulario">
         <h2>Añade una nueva película</h2>
 
         <form id="form">
@@ -26,7 +27,7 @@
           />
 
           <label for="anio">Año</label>
-          <input type="text" id="anio" name="anio" placeholder="Ej: 1997" />
+          <input type="number" id="anio" name="anio" placeholder="Ej: 1997" />
 
           <label for="descripcion">Descripción</label>
           <textarea
@@ -37,7 +38,7 @@
 
           <label for="urlFoto">URL de la foto</label>
           <input
-            type="text"
+            type="url"
             id="urlFoto"
             name="urlFoto"
             placeholder="https://...jpg"
@@ -54,10 +55,10 @@
 
           <button class="guardar" type="submit">Añadir película</button>
         </form>
+
         <div id="errorMessages"></div>
       </section>
-
-      <section id="filtros">
+      <section class="seccion-filtros">
         <h2>Filtrar películas</h2>
 
         <div>
@@ -81,12 +82,11 @@
           />
         </div>
       </section>
-
-      <section id="lista-pelis">
+      <section class="seccion-listado">
         <h2>Listado de películas</h2>
 
         <div class="tabla-responsive">
-          <table id="tabla">
+          <table class="tabla">
             <thead>
               <tr>
                 <th>Título</th>
@@ -97,6 +97,7 @@
                 <th>Acciones</th>
               </tr>
             </thead>
+
             <tbody id="tabla-pelis">
               <!-- Las películas se insertan con JavaScript -->
             </tbody>
@@ -109,6 +110,6 @@
       <p>&copy; 2026 Caja de Películas</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
