@@ -75,12 +75,13 @@ form.addEventListener("submit", (event) => {
     mensajesError += "Introduce un título con al menos 2 caracteres\n";
   }
 
-  const anioNumero = Number(anio);
-  const anioActual = new Date().getFullYear();
+ const anioNumero = Number(anio);
+const anioActual = new Date().getFullYear();
 
-  if (!/^\d+$/.test(anio) || anioNumero < 1800 || anioNumero > anioActual) {
-    mensajesError += "Introduce un año válido entre 1800 y el actual\n";
-  }
+if (!/^\d{4}$/.test(anio) || anioNumero < 1800 || anioNumero > anioActual) {
+  mensajesError += `Introduce un año válido entre 1800 y ${anioActual}\n`;
+}
+
 
   const descripcionRegex = /^.{5,400}$/;
   if (!descripcionRegex.test(descripcion)) {
