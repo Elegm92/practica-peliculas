@@ -111,9 +111,6 @@ if (!/^\d{4}$/.test(anio) || anioNumero < 1800 || anioNumero > anioActual) {
   };
   peliculas.push(pelicula);
   errorMessages.innerHTML = `<p>Película añadida</p>`;
-  setTimeout(() => {
-  errorMessages.innerHTML = "";
-}, 4000);
   mostrarPelicula(peliculas);
   form.reset();
 });
